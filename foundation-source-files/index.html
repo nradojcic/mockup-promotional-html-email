@@ -1,0 +1,64 @@
+---
+layout: kayak
+subject: Great Deals Today
+---
+
+<container>
+  <row class="deal-of-day">
+    <columns>
+      <h2><u>Mockup</u> Deal of the Day <u>Email</u></h2>
+      <img src="{{kayakEmail.dealOfTheDay.image}}" alt="" />
+      <p>
+        {{kayakEmail.dealOfTheDay.location}}:
+        {{kayakEmail.dealOfTheDay.description}}
+      </p>
+      <span class="save-amount">{{kayakEmail.dealOfTheDay.saveAmount}}</span>
+      <span class="tiny-info">{{kayakEmail.dealOfTheDay.tinyInfo}}</span>
+      <span class="price">{{kayakEmail.dealOfTheDay.price}}</span>
+      <a href="{{kayakEmail.dealOfTheDay.link}}"
+        ><span class="button">See Deal</span></a
+      >
+    </columns>
+  </row>
+</container>
+
+<container>
+  <row class="content-area">
+    <columns class="first-offer">
+      {{#each kayakEmail.offers}}
+      <row class="offer">
+        <columns>
+          <img src="{{this.image}}" alt="" />
+          <p>{{this.location}}: {{this.description}}</p>
+          <span class="save-amount">{{this.saveAmount}}</span>
+          <span class="tiny-info">{{this.tinyInfo}}</span>
+          <span class="price">{{this.price}}</span>
+          <a href="{{this.link}}"><span class="button">See Deal</span></a>
+        </columns>
+      </row>
+      {{/each}}
+    </columns>
+  </row>
+</container>
+
+<container>
+  <row class="content-area">
+    <columns>
+      <row class="offer last-offer">
+        <columns>
+          <row>
+            <columns>
+              <img src="assets/img/airplane_dark.png" class="group-icons" />
+            </columns>
+          </row>
+          <h4>Still Looking? There's more!</h4>
+          <p>
+            Search hundreds of deals to suit your budget on flights, packages,
+            cruises and more.
+          </p>
+          <a href="#"><span class="button">See All Deals</span></a>
+        </columns>
+      </row>
+    </columns>
+  </row>
+</container>
